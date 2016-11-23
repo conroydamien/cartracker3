@@ -1,0 +1,24 @@
+{
+    "cartracker3App": {
+        "car" : {
+            "home": {
+                "title": "Cars",
+                "createLabel": "Maak een nieuwe Car",
+                "createOrEditLabel": "Maak of wijzig een Car",
+                "search": "Search for Car"
+            },
+            "created": "A new Car is created with identifier {{ param }}",
+            "updated": "A Car is updated with identifier {{ param }}",
+            "deleted": "A Car is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Bent u zeker dat u Car {{ id }} wilt verwijderen?"
+            },
+            "detail": {
+                "title": "Car"
+            },
+            "vin": "Vin",
+            "contractID": "Contract ID",
+            "maintrec": "Maintrec"
+        }
+    }
+}

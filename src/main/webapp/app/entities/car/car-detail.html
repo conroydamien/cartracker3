@@ -1,0 +1,48 @@
+
+<div>
+    <h2><span data-translate="cartracker3App.car.detail.title">Car</span> {{vm.car.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <script src="bower_components/web3/dist/web3.min.js"></script>
+    <!--  script> var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545")); 
+             alert(web3.eth.defaultBlock);
+             
+             var _milage = 4;/* var of type uint256 here */
+             var maintenancerecordContract = web3.eth.contract([{"constant":false,"inputs":[{"name":"_milage","type":"uint256"}],"name":"setMilage","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"milage","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[{"name":"_milage","type":"uint256"}],"type":"constructor"}]);
+             var maintenancerecord = maintenancerecordContract.new(
+                _milage,
+                {
+                  from: web3.eth.accounts[0], 
+                  data: '606060405260405160208060de833981016040528080519060200190919050505b806000600050819055505b5060a68060386000396000f360606040526000357c010000000000000000000000000000000000000000000000000000000090048063bd9cffe2146043578063ea92c97114605d57603f565b6002565b34600257605b60048080359060200190919050506082565b005b34600257606c6004805050609d565b6040518082815260200191505060405180910390f35b600060005054811115609957806000600050819055505b5b50565b6000600050548156', 
+                  gas: 4700000
+                }, function (e, contract){
+                 console.log(e, contract);
+                 if (typeof contract.address !== 'undefined') {
+                      console.log('Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
+                      vm.car.contractID = contract.address;
+                 }
+              })
+    </script -->
+    
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="cartracker3App.car.vin">Vin</span></dt>
+        <dd>
+            <span>{{vm.car.vin}}</span>
+        </dd>
+        <dt><span data-translate="cartracker3App.car.contractID">Contract ID</span></dt>
+        <dd>
+            <span>{{vm.car.contractID}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="car-detail.edit({id:vm.car.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

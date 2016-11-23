@@ -1,0 +1,24 @@
+{
+    "cartracker3App": {
+        "maintrec" : {
+            "home": {
+                "title": "Maintrecs",
+                "createLabel": "Maak een nieuwe Maintrec",
+                "createOrEditLabel": "Maak of wijzig een Maintrec",
+                "search": "Search for Maintrec"
+            },
+            "created": "A new Maintrec is created with identifier {{ param }}",
+            "updated": "A Maintrec is updated with identifier {{ param }}",
+            "deleted": "A Maintrec is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Bent u zeker dat u Maintrec {{ id }} wilt verwijderen?"
+            },
+            "detail": {
+                "title": "Maintrec"
+            },
+            "milage": "Milage",
+            "notes": "Notes",
+            "car": "Car"
+        }
+    }
+}
