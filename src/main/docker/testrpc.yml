@@ -1,0 +1,7 @@
+version: '2'
+services:
+    cartracker3-testrpc:
+        container_name: cartracker3-testrpc
+        image: provivus/testrpc 
+        ports:
+            - 8545:8545 

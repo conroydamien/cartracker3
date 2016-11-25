@@ -14,3 +14,7 @@ services:
         extends:
             file: postgresql.yml
             service: cartracker3-postgresql
+    cartracker-testrpc:
+        extends:
+            file: testrpc.yml
+            service: cartracker3-testrpc
