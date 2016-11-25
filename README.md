@@ -2,6 +2,41 @@
 
 This application was generated using JHipster 3.10.0, you can find documentation and help at [https://jhipster.github.io/documentation-archive/v3.10.0](https://jhipster.github.io/documentation-archive/v3.10.0).
 
+This is a bit of a horrible hack that was pulled together pretty quickly!
+
+These instructions are heavily biased towards the Ubuntu/Linux user. If you're trying this on anything else you're on your own! 
+
+## Quick Route
+
+Get node and npm working on an Ubuntu instance. [Look here.](https://steemit.com/ethereum/@brennanhm/ethereum-smart-contract-testing-installing-truffle-and-testrpc).
+
+Get Docker Compose working - [Docker Compose][DockerComposeUbuntu].
+
+From the directory containing package.json run the command 'npm install'.
+
+Run the command 'npm install -g gulp-cli' (this might need a sudo).
+
+Run the command 'gradle bootRepackage'
+
+Run the command 'gradle buildDocker'
+
+Run the command 'docker-compose -f src/main/docker/app.yml up'
+
+The app should now be available at port 8080 on the host.
+
+If the quick route didn't work continue reading below!
+
+## Dependencies
+
+The cartracker3 project is based on JHipster and has dependencies on Postgres and TestRPC. One way to provide a Postgres instance prepared for the project is to use [Docker Compose][DockerComposeUbuntu]. This will ensure that the necessary tables and user roles are available. The Postgres instance must be running before the rest of the application is started.
+
+If you wish to use it, please ensure that you have Docker Compose (at least version 1.9 - earlier versions cause problems) installed and then refer to the [section](#using-docker-to-simplify-development) on using Docker below.
+
+When the database is up you should be able to install [PGAdminIII](https://www.pgadmin.org/) and browse the database. If you cannot see the 10 tables created in a database called cartracker3 then go no further until you can. 
+
+Because the web3 invocations are carried out from the Angular controllers (i.e. the browser, a decision made on the day) the domain name 'testrpc' must resolve to a testrpc instance with port 8545 open. You can just run testrpc locally and add an entry called testrpc to /etc/hosts with the address 127.0.0.1 to get started.
+
+
 ## Development
 
 Before you can build this project, you must install and configure the following dependencies on your machine:
@@ -89,6 +124,7 @@ To set up a CI environment, consult the [Setting up Continuous Integration][] pa
 [JHipster Homepage and latest documentation]: https://jhipster.github.io
 [JHipster 3.10.0 archive]: https://jhipster.github.io/documentation-archive/v3.10.0
 
+[DockerComposeUbuntu]:https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-14-04
 [Using JHipster in development]: https://jhipster.github.io/documentation-archive/v3.10.0/development/
 [Using Docker and Docker-Compose]: https://jhipster.github.io/documentation-archive/v3.10.0/docker-compose
 [Using JHipster in production]: https://jhipster.github.io/documentation-archive/v3.10.0/production/
