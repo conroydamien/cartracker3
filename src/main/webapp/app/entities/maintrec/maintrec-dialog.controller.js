@@ -28,7 +28,7 @@
         }
 
         function save () {
-        	var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+        	var web3 = new Web3(new Web3.providers.HttpProvider("http://testrpc:8545"));
         	
         	var myAddress = web3.eth.accounts[0];
         	var myContractID = vm.maintrec.car.contractID;

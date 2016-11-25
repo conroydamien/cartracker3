@@ -21,7 +21,7 @@
         });
         
         function getContractID() {
-        	var web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545")); 
+        	var web3 = new Web3(new Web3.providers.HttpProvider("http://testrpc:8545")); 
             alert(web3.eth.defaultBlock);
             
             var _milage = 4;/* var of type uint256 here */
